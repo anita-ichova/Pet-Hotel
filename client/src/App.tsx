@@ -1,13 +1,15 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import TestOwner from './TestOwner';
+import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import WelcomePage from './Components/WelcomePage/WelcomePage';
+import AllPets from './Components/AllPets/AllPets';
 
 function App() {
   return (
-    <div className="App">
-      <TestOwner/>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<WelcomePage />} />
+        <Route path="/all-pets" element={<AllPets />} />
+      </Routes>
+    </Router>
   );
 }
 
